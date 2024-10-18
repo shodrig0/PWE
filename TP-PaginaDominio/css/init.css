@@ -1,0 +1,204 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(249, 249, 249);
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+h3 {
+  color: rgb(255, 50, 50);
+  margin: 2em auto 0 auto;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.container-header img {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+
+.logoInicio {
+  margin: 0;
+  width: 8em;
+}
+
+hr {
+  width: 80%;
+}
+
+/* container-supremo*/
+.container-supremo {
+  width: 80%;
+  margin: 2em auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(249, 249, 249);
+  /* border-right: 0.05em solid rgba(0, 0, 0, 0.300); */
+}
+
+/* contenido */
+.contenido {
+  width: 100%;
+  height: inherit;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* sponsors */
+.sponsors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  height: 9.375em;
+}
+
+.sponsors>img {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 100px);
+  opacity: 0;
+  animation: carrusel 10s infinite;
+}
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+
+img:nth-child(4) {
+  animation-delay: 6s;
+}
+
+img:nth-child(5) {
+  animation-delay: 8s;
+}
+
+.sponsors img {
+  width: 10em;
+  height: 10em;
+  margin: 1.5em;
+  border-radius: 50%;
+}
+
+
+@keyframes carrusel {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+/* cuerpo */
+.container-seccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.efectoScroll {
+  view-timeline-name: --prueba;
+  view-timeline-axis: block;
+
+  animation-timeline: --prueba;
+  animation-name: mostrarContenido;
+
+  animation-range: entry 5% cover 50%;
+}
+
+.sobreMi {
+  margin: 0 auto;
+  width: 22em;
+  height: 22em;
+  background-image: url(../assets/img/Necesarias/sobreMI.jpg);
+  background-size: 170%;
+  background-position: center;
+  border-radius: 50%;
+  border: 0.015em solid rgb(22, 22, 29);
+}
+
+.minGal {
+  margin: 0 auto;
+  width: 22em;
+  height: 22em;
+  background-image: url(../assets/img/Necesarias/miniaturaGaleria.jpg);
+  background-size: cover;
+  background-position: top center;
+  border-radius: 50%;
+  border: 0.015em solid rgb(22, 22, 29);
+}
+
+.inicioJuega {
+  margin: 0 auto;
+  width: 22em;
+  height: 22em;
+  background-image: url(../assets/img/Necesarias/4ideal.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  border-radius: 50%;
+  border: 0.015em solid rgb(22, 22, 29);
+}
+
+@keyframes mostrarContenido {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}

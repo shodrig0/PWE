@@ -1,0 +1,190 @@
+.container-header {
+  width: 100%;
+  max-width: 1920px;
+  height: 50vh;
+  max-height: 1080px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  max-height: 1080px;
+  z-index: -1;
+  background-size: cover;
+  background-position: 0 -80px;
+  background-repeat: no-repeat;
+  filter: grayscale(50%) contrast(150%);
+  mask-image: linear-gradient(rgb(249, 249, 249) 85%, transparent);
+}
+
+/*backgrounds que se inyectan con js*/
+.index-bg {
+  background-image: url(../assets/img/Necesarias/7ideal.jpg);
+}
+
+.sobreEnd-bg {
+  background-image: url(../assets/img/Necesarias/3ideal.jpg);
+}
+
+/* nav */
+.navClass {
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  border-radius: 10px;
+}
+
+.navClass .primera-parte {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  /* transform-origin: top left; */
+  top: 0px;
+  left: -200px;
+  gap: 20px;
+}
+
+.navClass .segunda-parte {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  /* transform-origin: top right; */
+  top: 0px;
+  left: 200px;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .navClass {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navClass ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navClass .primera-parte,
+  .navClass .segunda-parte {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navClass li {
+    margin-bottom: 10px;
+  }
+}
+
+.navClass ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navClass ul li {
+  list-style: none;
+  margin: 0 1.20em;
+  transition: 0.5s;
+  /* transform: rotate(9.5deg); */
+}
+
+.navClass ul li a {
+  display: inline-block;
+  position: relative;
+  padding: 0.5em;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  text-shadow: 0 2px 10px rgba(3, 2, 2, 0.795);
+
+  z-index: 3;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.5s;
+  font-family: "Poppins", sans-serif;
+}
+
+.navClass ul:hover li a {
+  transform: scale(1.5);
+  opacity: 0.5;
+  filter: blur(0.2em);
+}
+
+.navClass ul li a:hover {
+  transform: scale(2);
+  opacity: 1;
+  filter: blur(0);
+  text-decoration: 0;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 2px 5px rgba(255, 255, 255, 0);
+}
+
+.navClass ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 50, 50);
+  border-radius: 5em;
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+.navClass ul li a:hover::before {
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* footer */
+.container-footer {
+  margin-top: 5em;
+  height: 20vh;
+  background-color: rgb(22, 25, 27);
+  color: rgb(255, 255, 255);
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container-footer span {
+  color: rgb(255, 255, 255);
+}
+
+.copyright {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 0.5em;
+}
+
+.copyright span {
+  font-size: 1em;
+}
+
+/* .copyright a {
+  text-decoration: none;
+} */

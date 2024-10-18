@@ -1,0 +1,98 @@
+.miHist {
+    margin: 2em 0;
+    padding: 2em 2em;
+    overflow: hidden;
+    text-align: justify;
+    max-width: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.247);
+    border-radius: 0.25em;
+}
+
+.miHist img {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.096);
+    border-radius: 0.25em;
+}
+
+.contIzq {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 2em;
+}
+
+.contIzq p {
+    width: 60%;
+    padding: 0 2em;
+}
+
+.contIzq img {
+    width: 25em;
+}
+
+.contIzq h4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 2em;
+}
+
+.contDer {
+    margin: 3em 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 2em;
+}
+
+.contDer img {
+    width: 25em;
+}
+
+.contDer p {
+    width: 100%;
+    padding-right: 2em;
+}
+
+.contDer h4 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 2em;
+}
+
+.contCent h4 {
+    text-align: center;
+}
+
+.seccionSobreMi {
+    width: 80%;
+    padding: 1em;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.contenedorPicsAboutMe {
+    display: flex;
+    width: 600px;
+    height: 430px;
+}
+
+.contenedorPicsAboutMe img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: .5s ease-in-out;
+}
+
+.contenedorPicsAboutMe img:hover {
+    cursor: zoom-in;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}

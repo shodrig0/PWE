@@ -1,0 +1,180 @@
+.container-mayor {
+  height: 100vh;
+  /* background-color: rgb(202, 114, 31); */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 50vw;
+  height: 50vh;
+  margin: 0 auto;
+  position: relative;
+  background: url(../assets/img/Default_Cielo_del_desierto_de_un_atardecer_estilo_manga_Jojos_2.jpg);
+
+  background-repeat: no-repeat;
+  background-size: 140%;
+  background-position: center;
+  overflow: hidden;
+  border: 1px solid black;
+  border-radius: 0.25em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.733);
+}
+
+.moto {
+  width: 84px;
+  height: 84px;
+  position: absolute;
+  top: 215px;
+  left: 42px;
+  z-index: 2;
+  background: url(../assets/img/spriteanimar.png) repeat-x 0 0;
+  background-size: 340px 84px;
+  background-position-x: 0;
+}
+
+.moto-funcionando {
+  animation: animarMoto 0.25s steps(2) infinite;
+}
+
+.moto-colision {
+  background-position: -262px;
+}
+
+.piso {
+  width: 200%;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  background: url(../assets/img/piso.png) repeat-x 0 0;
+  background-size: 50% 42px;
+}
+
+.cactus {
+  width: 46px;
+  height: 96px;
+  position: absolute;
+  bottom: -10px;
+  right: -100%;
+  z-index: 2;
+  background: url(../assets/img/cactusrenderF.png) no-repeat;
+  animation: none;
+}
+
+.rocas {
+  width: 98px;
+  height: 66px;
+  position: absolute;
+  bottom: 0px;
+  right: -100%;
+  z-index: 2;
+  background: url(../assets/img/rocas.png) no-repeat;
+  animation: none;
+}
+
+@keyframes obstaculo {
+  0% {
+    left: 1500px;
+  }
+
+  100% {
+    left: -20px;
+  }
+}
+
+.puntaje {
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  z-index: 5;
+  color: rgb(0, 0, 0);
+  font-family: monospace;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.game-over {
+  display: none;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  font-family: monospace;
+  z-index: 50;
+}
+
+@keyframes animarMoto {
+  from {
+    background-position-x: -84px;
+  }
+
+  50% {
+    background-position-x: -255px;
+  }
+
+  to {
+    background-position-x: -261px;
+  }
+}
+
+#controles {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+}
+
+#controles button {
+  cursor: pointer;
+  margin: 2em;
+  width: 9.5em;
+  height: 4em;
+  border: none;
+  border-radius: 0.25em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.514);
+  background-image: transparent;
+  font-size: 1.25em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.containerPuntajes {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tablaPuntos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tablaPuntos th,
+.tablaPuntos td {
+  border: 1px solid rgb(22, 25, 27);
+  padding: 0.25em 2em;
+  text-align: center;
+}
+
+.tablaPuntos th {
+  background-color: rgba(124, 255, 107, 0.555);
+  padding: 1em;
+}
+
+.tablaPuntos tr:nth-child(even) {
+  background-color: rgba(255, 25, 36, 0.350);
+}
+
+.tablaPuntos tr:nth-child(odd) {
+  background-color: rgba(7, 42, 156, 0.350);
+}
